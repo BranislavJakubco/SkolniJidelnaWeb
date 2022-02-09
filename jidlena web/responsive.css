@@ -1,0 +1,148 @@
+@media (max-width: 1238px){
+    
+    .levej {
+        width: 100%; 
+        height: 50vh;
+    }
+    .pravej {
+        width: 100%;
+        height: 50vh;
+    }
+
+
+
+
+
+    .hodnoceni1 {
+        width : 90%;
+        height : 70vw;
+        float : left;
+        margin-left: 5vw;
+        margin-top: 1vw;
+        margin-bottom: 4px;
+    }
+    .hodnoceni2 {
+        width : 90%;
+        height : 70vw;
+        float : left;
+        margin-left: 5vw;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    .hodnoceni3 {
+        width : 90%;
+        height : 70vw;
+        float : left;
+        margin-left: 5vw;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    .hodnoceni4 {
+        width : 90%;
+        height : 70vw;
+        float : left;
+        margin-left: 5vw;
+        margin-top: 3px;
+        margin-bottom: 10px;
+    }
+
+
+
+
+
+
+
+    .vadip {
+        width : 90%;
+        height : 26vw;
+        float : left;
+        margin-left: 5vw;
+        margin-top: 3px;
+        margin-bottom: 3px;
+      }
+    .vadil {
+        width : 90%;
+        height : 26vw;
+        float : left;
+        margin-left: 5vw;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    .polevka {
+        width : 90%;
+        height : 24vw;
+        float : left;
+        margin-left: 5vw;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    .odeslat {
+        width : 90%;
+        height : 24vw;
+        float : left;
+        margin-left: 5vw;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    
+
+    .polevkad {
+        width : 90%;
+        height : 24vw;
+        float : left;
+        margin-left: 5vw;
+        margin-top: px;
+        margin-bottom: 3px;
+    }
+
+    .odeslatt {
+        width : 90%;
+        height : 24vw;
+        float : left;
+        margin-left: 5vw;
+        margin-top: 250px;
+        margin-bottom: 3px;
+    }
+
+    .odeslatd {
+        width : 90%;
+        height : 24vw;
+        float : left;
+        margin-left: 5vw;
+        margin-top: 250px;
+        margin-bottom: 3px;
+    }
+
+
+
+
+}
+
+
+
+@media (max-width: 400px){
+    .formatnadpisu {
+        font-size: 6vh;
+        color: #222222;
+        text-align: center;
+        margin-top: 5vh;
+    }
+}
+
+@media (min-width: 401px){
+    .formatnadpisu {
+        font-size: 8vh;
+        color: #222222;
+        text-align: center;
+        margin-top: 5vh;
+    }
+}
+
+@media (min-width: 851px){
+    .formatnadpisu {
+        font-size: 10vh;
+        color: #222222;
+        text-align: center;
+        margin-top: 5vh;
+    }
+}
