@@ -1,0 +1,29 @@
+parameters:
+
+
+application:
+	errorPresenter: Error
+	catchExceptions: true
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+php:
+	date.timezone: Europe/Prague
+	zlib.output_compression: yes
+
+http:
+	headers:
+		X-Author: 'Jindřich Veselý'
+
+session:
+	expiration: 14 days
+
+
+di:
+	export:
+		parameters: no
+		tags: no
+
+services:
+	authenticator: App\Model\UserManager (@database.users.context)
+	router: App\Router\RouterFactory::createRouter

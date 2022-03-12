@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>database</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>database</title>
+</head>
+<body>
+  <form method="post" autocomplete="off" name="google-sheet">
+      <center><br><br>
+         <h1>Registration Form</h1><br>
+         <table border="5">
+
+             <tr><td><b>Name : </b></td>
+             <td><input type="text" name="obed1"   /></td>
+            </tr>
+            <tr><td><b>Email : </b></td>
+            <td><input type="text" name="obed2"  /></td>
+            </tr>
+            <tr><td><b>Phone no. : </b></td>
+            <td><input type="text" name="polevka"   /></td>
+            </tr>
+         </table>
+         <br><br>
+         <input type="submit" name="submit" value="Submit"/>
+    </center>
+  </form>
+
+  <script type="text/javascript">
+
+
+      const scriptURL = 'https://sheetdb.io/api/v1/7symtfpecksct'
+            const form = document.forms['google-sheet']
+
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("You have successfully submitted."))
+                .catch(error => console.error('Error!', error.message))
+            })
+  </script>
+</body>
+</html>
+</body>
+</html>

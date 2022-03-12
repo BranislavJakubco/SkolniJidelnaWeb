@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{ifset title}{include title|stripHtml}{/ifset}</title>
+
+	<meta name="author" content="Jindřich Veselý">
+
+	{ifset style} {include style} {/ifset}
+
+	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+	<script src="https://nette.github.io/resources/js/3/netteForms.min.js"></script>
+</head>
+
+<body>
+	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+
+	{include content}
+
+	{include scripts}
+</body>
+</html>
