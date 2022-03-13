@@ -3,7 +3,6 @@ parameters:
 
 application:
 	errorPresenter: Error
-	catchExceptions: true
 	mapping:
 		*: App\*Module\Presenters\*Presenter
 
@@ -25,5 +24,6 @@ di:
 		tags: no
 
 services:
-	authenticator: App\Model\UserManager (@database.users.context)
-	router: App\Router\RouterFactory::createRouter
+  - App\Router\RouterFactory::createRouter
+  - App\Model\UserManager (@database.database.context)
+  - App\Model\RatingRepository (@database.database.context)

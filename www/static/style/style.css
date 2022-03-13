@@ -1,0 +1,162 @@
+body {
+  margin: 0%;
+  background-image: linear-gradient(to bottom right, #95dbf5, #ffb2ae);
+  background-attachment: fixed;
+}
+
+h1 {
+  color: #414141;
+  font-family: arial, sans-serif;
+  font-size: 10vh;
+  margin: 0%;
+}
+
+p {
+  color: #585858;
+  font-family: arial, sans-serif;
+  font-size: 5vh;
+  margin: 0%;
+}
+
+.main-select {
+  width: 50%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.levej {
+  background-image: linear-gradient(#95dbf5, #ffb2ae);
+  float: left;
+}
+
+.pravej {
+  background-image: linear-gradient(#ffb2ae, #95dbf5);
+  float: right;
+}
+
+.round-image {
+  width: 15vw;
+  height: 3 0vh;
+  border-radius: 40px;
+}
+
+.hodnoceni {
+  width: 20vw;
+  height: 75vh;
+  float: left;
+  margin: 4vh;
+  margin-top: 4vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 40px;
+}
+
+.red {
+  background-color: #c56b73;
+}
+
+.yellow {
+  background-color: #ffbe61;
+}
+
+.yellow2 {
+  background-color: #f5f77e;
+}
+
+.green {
+  background-color: #a5fcac;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.text-score {
+  color: #222222;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 40vw);
+  column-gap: 19vh;
+  row-gap: 4vw;
+  margin-left: 11vh;
+}
+
+.button-hodnoceni {
+  width: 40vw;
+  height: 15vh;
+  background-color: rgba(148, 123, 173, 0.5);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.selected {
+  box-sizing: border-box;
+  border: 2vh solid rgba(87, 72, 102, 0.5);
+  transition: 0.2s;
+}
+
+#button-hodnotit-polevku {
+  width: 55vw;
+  height: 15vh;
+  color: #222222;
+  background-color: #a7bed3;
+  border-radius: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#button-hodnotit-polevku > h1 {
+  font-size: 3vw;
+}
+
+#button-odeslat {
+  margin-left: auto;
+  color: #222222;
+  width: 28vw;
+  height: 15vh;
+  background-color: #a7bed3;
+  border-radius: 40px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#button-odeslat > h1 {
+  font-size: 3vw;
+}
+
+/* https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}

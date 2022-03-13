@@ -12,13 +12,19 @@
 
 	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
 	<script src="https://nette.github.io/resources/js/3/netteForms.min.js"></script>
+	<script src="/static/js/Naja.min.js"></script>
+	<script>
+		naja.initialize();
+	</script>
 </head>
 
 <body>
-	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+	<div n:snippet="flashes">
+		<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+	</div>
 
 	{include content}
 
-	{include scripts}
+	{ifset scripts} {include scripts} {/ifset}
 </body>
 </html>

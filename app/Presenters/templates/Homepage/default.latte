@@ -1,21 +1,125 @@
 {block title}Hodnocení oběda{/block}
 {block style}
-<link rel="stylesheet" href="/style/style.css">
-<link rel="stylesheet" href="/style/responsive.css">
+<link rel="stylesheet" href="/static/style/style.css">
+<link rel="stylesheet" href="/static/style/responsive.css">
+
+<style>
+#hlavni-chod, #hodnoceni-polevky,#spatny-obed,#hodnotit-polevku,#spatna-polevka {
+    display: none;
+}
+#spatny-obed, #hodnotit-polevku, #spatna-polevka {
+    margin-top: 10vh;
+}
+</style>
+
 {/block}
 {block scripts}
 
+<script src="/static/js/main.js"></script>
+
 {/block}
 {block content}
-<a href="hodnoceni.html">
-    <div class="levej">
+<div id="obed-select" class="noselect">
+    <div class="main-select levej clickable" id="obed" obed-type="1">
         <h1>Oběd 1</h1>
         <p>Ohodnoťte oběd 1</p>
     </div>
-</a>
-<a href="hodnoceni.html">
-    <div class="pravej">
+    <div class="main-select pravej clickable" id="obed" obed-type="2">
         <h1>Oběd 2</h1>
         <p>Ohodnoťte oběd 2</p>
     </div>
-</a>
+</div>
+<div id="hlavni-chod" class="noselect">
+    <div class="formatnadpisu">
+        Hlavní chod
+    </div>
+    <div id="hodnoceni-obed" class="hodnoceni red clickable" score="1">
+        <img src="/images/1.png" alt="DIO" class="center round-image">
+        <p style="color: #222222; text-align:center; font-size:5vh; margin-top: 2vh;">Nechutnalo mi</p>
+        <p style="color: #222222; text-align:center; font-size:3vh;">Z dnešního hlavního chodu jsem se moc nenajedl. Vůbec mi to nechutnalo nebo nejím přísady.</p>
+    </div>
+    <div id="hodnoceni-obed" class="hodnoceni yellow clickable" score="2">
+        <img src="/images/2.png" alt="DIO" class="center round-image">
+        <p style="color: #222222; text-align:center; font-size:5vh; margin-top: 2vh;">Nic moc</p>
+        <p style="color: #222222; text-align:center; font-size:3vh;">Dnešní hlavní chod nebyl dobrý, ale dalo se to.</p>
+    </div>
+    <div id="hodnoceni-obed" class="hodnoceni yellow2 clickable" score="3">
+        <img src="/images/3.png" alt="DIO" class="center round-image">
+        <p style="color: #222222; text-align:center; font-size:5vh; margin-top: 2vh;">Šlo to</p>
+        <p style="color: #222222; text-align:center; font-size:3vh;">Dnešní hlavní chod byl v pořádku, jen to nebylo to co bych si představoval</p>
+    </div>
+    <div id="hodnoceni-obed" class="hodnoceni green clickable" score="4">
+        <img src="/images/4.png" alt="DIO" class="center round-image">
+        <p style="color: #222222; text-align:center; font-size:5vh; margin-top: 2vh;">Chutnalo mi</p>
+        <p style="color: #222222; text-align:center; font-size:3vh;">Jsem s dnešním hlavním chodem spokojen. Pochutnal jsem si</p>
+    </div>
+</div>
+<div id="spatny-obed" class="noselect">
+    <div class="container">
+        <div n:foreach="$reasons as $key=>$reason" id="hodnoceni-obed-duvod" reason="{$key}" class="button-hodnoceni">
+            <h1 class="text-score">
+                {$reason}
+            </h1>
+        </div>
+        <div id="button-hodnotit-polevku">
+            <h1>Ohodnotit polévku</h1>
+        </div>
+        <div id="button-odeslat">
+            <h1>Odeslat</h1>
+        </div>
+    </div>
+</div>
+<!-- jestli si uživatel přeje hodnotit polevku pokud dal dobre score-->
+<div id="hodnotit-polevku">
+    <div class="container">
+        <div id="button-hodnotit-polevku">
+            <h1>Ohodnotit polévku</h1>
+        </div>
+        <div id="button-odeslat">
+            <h1>Odeslat</h1>
+        </div>
+    </div>
+</div>
+<div id="hodnoceni-polevky" class="noselect">
+    <div class="formatnadpisu">Polévka</div>
+    <div id="hodnoceni-polevka" class="hodnoceni red clickable" score="1">
+        <img src="/images/1.png" alt="DIO" class="center round-image">
+        <p style="color: #222222; text-align:center; font-size:5vh; margin-top: 2vh;">Nechutnalo mi</p>
+        <p style="color: #222222; text-align:center; font-size:3vh;">Z dnešní polévky jsem se moc nenajedl. Vůbec mi to nechutnalo, nebo nejím přísady.</p>
+    </div>
+    <div id="hodnoceni-polevka" class="hodnoceni yellow clickable" score="2">
+        <img src="/images/2.png" alt="DIO" class="center round-image">
+        <p style="color: #222222; text-align:center; font-size:5vh; margin-top: 2vh;">Nic moc</p>
+        <p style="color: #222222; text-align:center; font-size:3vh;">Dnešní polévka nebyla dobrá, ale dalo se to.
+        </p>
+    </div>
+    <div id="hodnoceni-polevka" class="hodnoceni yellow2 clickable" score="3">
+        <img src="/images/3.png" alt="DIO" class="center round-image">
+        <p style="color: #222222; text-align:center; font-size:5vh; margin-top: 2vh;">Šlo to</p>
+        <p style="color: #222222; text-align:center; font-size:3vh;">Dnešní polévka byla v pořádku, jen to nebylo to co bych si představoval</p>
+    </div>
+    <div id="hodnoceni-polevka" class="hodnoceni green clickable" score="4">
+        <img src="/images/4.png" alt="DIO" class="center round-image">
+        <p style="color: #222222; text-align:center; font-size:5vh; margin-top: 2vh;">Chutnalo mi</p>
+        <p style="color: #222222; text-align:center; font-size:3vh;">Jsem s dnešní polévkou spokojen. Pochutnal jsem si</p>
+    </div>
+</div>
+<div id="spatna-polevka" class="no-select">
+    <div class="container">
+        <div n:foreach="$reasons as $key=>$reason" id="hodnoceni-polevka-duvod" reason="{$key}" class="button-hodnoceni">
+            <h1 class="text-score">
+                {$reason}
+            </h1>
+        </div>
+        <div id="button-odeslat">
+            <h1>Odeslat</h1>
+        </div>
+    </div>
+</div>
+<form style="display: none;" class="ajax" n:name=scoreForm>
+    <input id="cisloObedu" n:name=cisloObedu>
+    <input id="scoreObed" n:name=scoreObed>
+    <input id="scorePolevky" n:name=scorePolevky>
+    <input id="obedSpatnyDuvod" n:name=obedSpatnyDuvod>
+    <input id="polevkaSpatnaDuvod" n:name=polevkaSpatnaDuvod>
+</form>

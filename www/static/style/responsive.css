@@ -1,0 +1,87 @@
+@media (max-width: 1400px) {
+  .levej {
+    width: 100%;
+    height: 50vh;
+  }
+  .pravej {
+    width: 100%;
+    height: 50vh;
+  }
+  .hodnoceni {
+    width: 90%;
+    height: 70vw;
+    float: left;
+
+    margin-left: 5vw;
+    margin-top: 1vw;
+    margin-bottom: 10px;
+
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+  }
+  .button-hodnoceni {
+    width: 90%;
+    height: 26vw;
+  }
+
+  .container {
+      grid-template-columns: unset;
+      column-gap: unset;
+  }
+
+  .polevka {
+    width: 90%;
+    height: 24vw;
+    float: left;
+    margin-left: 5vw;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  .odeslat {
+    width: 90%;
+    height: 24vw;
+    float: left;
+    margin-left: 5vw;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+  #button-hodnotit-polevku {
+    width: 90%;
+    height: 24vw;
+  }
+
+  #button-odeslat {
+    width: 90%;
+    height: 24vw;
+    margin-left: unset
+  }
+
+}
+
+@media (max-width: 400px) {
+  .formatnadpisu {
+    font-size: 6vh;
+    color: #222222;
+    text-align: center;
+    margin-top: 5vh;
+  }
+}
+
+@media (min-width: 401px) {
+  .formatnadpisu {
+    font-size: 8vh;
+    color: #222222;
+    text-align: center;
+    margin-top: 5vh;
+  }
+}
+
+@media (min-width: 851px) {
+  .formatnadpisu {
+    font-size: 10vh;
+    color: #222222;
+    text-align: center;
+    margin-top: 5vh;
+  }
+}
